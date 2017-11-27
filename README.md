@@ -65,6 +65,14 @@ import {
 
 initCouchbase(_bucketsConfig: Object, _statusBuckets: [string] | string);
 
+// example in tests :
+import {bucketsConfig} from './config/buckets.config.js';
+
+beforeEach(() => {
+  initCouchbase(bucketsConfig, 'default');
+});
+
+// retreive status, used by healthcheck
 async getStatus();
 
 put(bucketKey: string, key: string, value: Promise<Object>): void;
@@ -80,8 +88,7 @@ Helpers are also available for test purpose :
 ```javascript
 import {
   initCampaignInCouchbase,
-  expectCappingToBe,
-  clear
+  expectCappingToBe
 } from 'module-couchbase/helpers';
 
 // create a campaign object in Couchbase
@@ -92,9 +99,6 @@ await put('campaign', campaignJson.id, campaignJson);
 
 // allow comparing cappings
 async expectCappingToBe(cappingKey, valueKey, expectedValue);
-
-// clear currents stored entries from CB (for tests)
-clear()
 ```
 
 ## Work on it
