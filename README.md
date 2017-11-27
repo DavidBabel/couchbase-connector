@@ -101,14 +101,16 @@ await put('campaign', campaignJson.id, campaignJson);
 async expectCappingToBe(cappingKey, valueKey, expectedValue);
 ```
 
-## Usage with module-heatlh
+## Usage with module-health
 
 ```javascript
+import healthController, {addHealthCheck} from 'module-healthcheck';
 import {initCouchbase, getStatus as getCouchbaseStatus} from 'module-couchbase';
-import bucketsConfig from '@config/buckets.config';
+import bucketsConfig from './config/buckets.config';
 
 initCouchbase(bucketsConfig, ['cappings', 'campaign']);
 addHealthCheck(getCouchbaseStatus);
+app.use('/health', healthController);
 ```
 
 ## Work on it
