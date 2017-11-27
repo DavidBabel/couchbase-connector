@@ -50,7 +50,7 @@ initCouchbase(configObjects, 'bucketName');
 initCouchbase(configObjects, ['bucket1', 'bucket2', 'bucket3']);
 ```
 
-Here is the full API you can use after initCouchbase :
+Here is the full API you can use after initCouchbase() :
 
 ```javascript
 import {
@@ -99,6 +99,16 @@ await put('campaign', campaignJson.id, campaignJson);
 
 // allow comparing cappings
 async expectCappingToBe(cappingKey, valueKey, expectedValue);
+```
+
+## Usage with module-heatlh
+
+```javascript
+import {initCouchbase, getStatus as getCouchbaseStatus} from 'module-couchbase';
+import bucketsConfig from '@config/buckets.config';
+
+initCouchbase(bucketsConfig, ['cappings', 'campaign']);
+addHealthCheck(getCouchbaseStatus);
 ```
 
 ## Work on it
