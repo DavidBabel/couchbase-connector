@@ -1,8 +1,8 @@
 {
-  "name": "module-couchbase",
+  "name": "couchbase-connector",
   "version": "1.1.1",
   "main": "dist/index.js",
-  "repository": "git@github.com:DavidBabel/module-couchbase.git",
+  "repository": "git@github.com:DavidBabel/couchbase-connector.git",
   "author": "David Babel <david.babel@ogury.co>",
   "license": "MIT",
   "scripts": {

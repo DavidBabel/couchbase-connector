@@ -1,11 +1,11 @@
-# Module Couchbase
+# Couchbase Connector
 
 ## Install
 
 To install it in your project, think to fix the version using this kind of command :
 
 ```bash
-yarn add Ogury/module-couchbase#v1.X.X
+yarn add Ogury/couchbase-connector#v1.X.X
 ```
 
 ## Requirements
@@ -61,7 +61,7 @@ import {
   getWithCache,
   initCounter,
   increment
-} from 'module-couchbase';
+} from 'couchbase-connector';
 
 initCouchbase(_bucketsConfig: Object, _statusBuckets: [string] | string);
 
@@ -89,7 +89,7 @@ Helpers are also available for test purpose :
 import {
   initCampaignInCouchbase,
   expectCappingToBe
-} from 'module-couchbase/helpers';
+} from 'couchbase-connector/helpers';
 
 // create a campaign object in Couchbase
 // @campaignJson should have an id
@@ -101,11 +101,11 @@ await put('campaign', campaignJson.id, campaignJson);
 async expectCappingToBe(cappingKey, valueKey, expectedValue);
 ```
 
-## Usage with module-health
+## Usage with health-controller
 
 ```javascript
-import healthController, {addHealthCheck} from 'module-healthcheck';
-import {initCouchbase, getStatus as getCouchbaseStatus} from 'module-couchbase';
+import healthController, {addHealthCheck} from 'health-controller';
+import {initCouchbase, getStatus as getCouchbaseStatus} from 'couchbase-connector';
 import bucketsConfig from './config/buckets.config';
 
 initCouchbase(bucketsConfig, ['cappings', 'campaign']);
