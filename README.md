@@ -1,5 +1,9 @@
 # Couchbase Connector
 
+## Warning
+
+To run `npm install` or `yarn install` in your project with this module in it you need to store your key in a ssh-agent or in your MacOs Keychain : https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
 ## Install
 
 To install it in your project, think to fix the version using this kind of command :
@@ -101,7 +105,7 @@ await put('campaign', campaignJson.id, campaignJson);
 async expectCappingToBe(cappingKey, valueKey, expectedValue);
 ```
 
-## Usage with health-controller
+## Usage with health controller
 
 ```javascript
 import healthController, {addHealthCheck} from 'health-controller';
