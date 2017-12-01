@@ -9,7 +9,7 @@ To run `npm install` or `yarn install` in your project with this module in it yo
 To install it in your project, think to fix the version using this kind of command :
 
 ```bash
-yarn add Ogury/couchbase-connector#v1.X.X
+yarn add Ogury/couchbase-connector#^1.X.X
 ```
 
 ## Requirements

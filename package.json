@@ -1,6 +1,6 @@
 {
   "name": "couchbase-connector",
-  "version": "1.1.1",
+  "version": "3.0.0",
   "main": "dist/index.js",
   "repository": "git@github.com:DavidBabel/couchbase-connector.git",
   "author": "David Babel <david.babel@ogury.co>",
